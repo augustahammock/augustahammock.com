@@ -1,0 +1,7 @@
+// Global scripts
+
+$(function(){
+
+    
+
+});
