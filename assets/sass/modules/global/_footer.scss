@@ -1,0 +1,71 @@
+.global-footer {
+    padding: 30px 0;
+
+    p {
+        text-align: center;
+        color: $grey-3;
+    }
+
+    span {
+        color: $grey-3;
+    }
+
+    .quick-contact {
+        margin-bottom: 5px;
+    }
+
+    .divider {
+        display: inline-block;
+        position: relative;
+        top: 3px;
+        width: 2px;
+        height: 15px;
+        background: $grey-2;
+        margin: 0 8px;
+    }
+
+    .social-links {
+        text-align: center;
+        margin-bottom: 5px;
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            display: block;
+            width: 25px;
+            height: 25px;
+
+            &:hover {
+                svg {
+                    fill: $charcoal;
+                    transition: .1s fill ease-out;
+                }
+            }
+        }
+
+        svg {
+            fill: $grey-3;
+            transition: .3s fill ease-out;
+        }
+
+        .facebook {
+            padding: 7px 5px;
+
+            svg {
+                width: 13px;
+                height: 15px;
+            }
+        }
+
+        .instagram {
+            padding: 7px 5px;
+
+            svg {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+}

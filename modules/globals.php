@@ -3,9 +3,9 @@
     if ($env == 'local'){
         $path = [
             'modules'   => $root . '/modules',
-            'css'       => '/augustahammock.com/public/css',
+            'css'       => 'public/css',
             'js'        => '/augustahammock.com/public/js',
-            'img'       => '/augustahammock.com/public/img'
+            'img'       => 'public/img'
         ];
     } else {
         $path = [
@@ -36,7 +36,7 @@
 
     // Global include defaults
     $globals = [
-        'pageJS' => $path['js'] . 'global.min.js'
+        'pageJS' => $path['js'] . '/global.min.js'
     ];
 
 ?>

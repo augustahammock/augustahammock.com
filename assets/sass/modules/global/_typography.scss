@@ -1,3 +1,80 @@
+* {
+    font-family: $soinRoman;
+    color: $charcoal;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font-family: $soinRoman;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: $white;
+}
+
+h2 {
+    font-family: $soinRoman;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $grey-3;
+
+    @include breakpoint(600) {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+h3 {
+    font-family: $soinMedium;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $charcoal;
+}
+
 p {
+    font-family: $soinRoman;
+    font-size: 17px;
+    line-height: 25px;
+    color: $charcoal;
+
+    &.emphasis {
+        font-family: $soinOblique;
+    }
+
+    &.large {
+        font-size: 21px;
+        line-height: 29px;
+    }
+
+    &.small {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+.caption {
+    font-family: $soinMedium;
     font-size: 10px;
+    letter-spacing: 2px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $grey-3;
+}
+
+// Text Links -------------------------------------------
+
+a, a:link, a:visited {
+    text-decoration: none;
+    color: $red-1;
+    // transition: .1s color ease-out;
+}
+
+a:hover {
+    color: $red-3;
+    // transition: .1s color ease-out;
 }

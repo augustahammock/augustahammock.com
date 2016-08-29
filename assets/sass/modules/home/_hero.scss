@@ -1,0 +1,82 @@
+.home-hero {
+    background: $charcoal url('../img/home/hero-indomitus@2x.jpg') no-repeat top center;
+    background-size: 1400px auto;
+
+    @include breakpoint(1024) {
+        background-size: cover;
+    }
+
+    @include breakpoint(550) {
+        background: $grey-2;
+        padding-bottom: 10px;
+    }
+
+    .row {
+        height: 733px;
+
+        @include breakpoint(1024) {
+            height: 500px;
+        }
+
+        @include breakpoint(768) {
+            height: 390px;
+        }
+
+        @include breakpoint(550) {
+            height: auto;
+        }
+    }
+
+    .content {
+        position: absolute;
+        right: 20px;
+        bottom: 80px;
+        text-align: right;
+
+        @include breakpoint(1024) {
+            bottom: 50px;
+        }
+
+        @include breakpoint(768) {
+            bottom: 30px;
+        }
+
+        @include breakpoint(550) {
+            position: static;
+            text-align: center;
+        }
+    }
+
+    .button {
+        margin-bottom: 20px;
+
+        @include breakpoint(550) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .caption {
+        color: rgba(255, 255, 255, .35);
+
+        @include breakpoint(550) {
+            color: $grey-3;
+        }
+    }
+
+    .image {
+        display: none;
+        width: 100%;
+        height: 0;
+        background-color: $charcoal;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        background-image: url('../img/home/hero-indomitus@2x.jpg');
+        margin-bottom: 20px;
+        padding-top: 52%;
+
+        @include breakpoint(550) {
+            display: block;
+        }
+    }
+}

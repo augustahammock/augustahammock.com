@@ -2,5 +2,5 @@
 // augustahammock.com/contact
 
 $(function() {
-    $.getScript('modules/header.js');
+    $.getScript('global.js');
 });

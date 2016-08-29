@@ -1,0 +1,5 @@
+// Breakpoint
+// Example: @include breakpoint(600) { ... }
+@mixin breakpoint($viewportWidth) {
+    @media only screen and (max-width: $viewportWidth + px) { @content; }
+}

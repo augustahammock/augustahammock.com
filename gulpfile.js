@@ -7,12 +7,19 @@ var gulp            = require('gulp'),
     jshint          = require('gulp-jshint'),
     stylish         = require('jshint-stylish'),
     imageMin        = require('gulp-imagemin'),
+    svgStore        = require('gulp-svgstore'),
+    svgMin          = require('gulp-svgmin'),
+    cheerio         = require('gulp-cheerio'),
     newer           = require('gulp-newer'),
     rename          = require('gulp-rename'),
     browserSync     = require('browser-sync'),
     plumber         = require('gulp-plumber'),
     notify          = require('gulp-notify'),
     path            = require('path');
+
+browserSync.init({
+    injectChanges: true
+});
 
 // Directories ------------------------------------------
 
@@ -21,7 +28,8 @@ var devAssets   = path.join(__dirname, '/assets'),
     srcDirs     = {
         sass:       path.join(devAssets, '/sass'),
         scripts:    path.join(devAssets, '/js'),
-        images:     path.join(devAssets, '/img')
+        images:     path.join(devAssets, '/img'),
+        svgs:       path.join(devAssets, '/img/svgs')
     },
     destDirs    = {
         css:        path.join(prodAssets, '/css'),
@@ -29,15 +37,17 @@ var devAssets   = path.join(__dirname, '/assets'),
         images:     path.join(prodAssets, '/img')
     },
     files       = {
-        sass:           path.join(srcDirs.sass, '/*.scss'),
+        sassRoot:       path.join(srcDirs.sass, '/*.scss'),
+        sass:           path.join(srcDirs.sass, '/**/*.scss'),
         scriptsRoot:    path.join(srcDirs.scripts, '/*.js'),
         scripts:        path.join(srcDirs.scripts, '/**/*.js'),
-        images:         path.join(srcDirs.images, '/**/*')
+        images:         path.join(srcDirs.images, '/**/*'),
+        svgs:           path.join(srcDirs.svgs, '*.svg')
     };
 
 // Tasks ------------------------------------------------
 
-// Assets
+// Images
 gulp.task('images', function() {
 
     return gulp.src(files.images)
@@ -49,7 +59,7 @@ gulp.task('images', function() {
 
 // Sass
 gulp.task('sass', function() {
-    return gulp.src(files.sass)
+    return gulp.src(files.sassRoot)
         .pipe(plumber({
             errorHandler: notify.onError({
                 title:      'Sass Error:',
@@ -57,13 +67,13 @@ gulp.task('sass', function() {
         }))
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(destDirs.css));
-        // .pipe(browserSync.reload({stream: true}));
+        .pipe(gulp.dest(destDirs.css))
+        .pipe(browserSync.reload({stream: true}));
 });
 
 // Scripts
 gulp.task('scripts', function() {
-    return gulp.src(files.scriptsRoot)
+    return gulp.src(files.scripts)
         .pipe(jshint())
         .pipe(jshint.reporter(stylish))
         .pipe(plumber({
@@ -77,14 +87,39 @@ gulp.task('scripts', function() {
 });
 
 // Sync
-// gulp.task('sync', function () {
-//     browserSync({
-//         proxy:      'localhost:9999',
-//         debugInfo:  false,
-//         browser:    'google chrome',
-//         open:       false,
-//         notify:     false,
-//     });
+gulp.task('sync', function () {
+    browserSync({
+        proxy:      'localhost/augustahammock.com/',
+        debugInfo:  false,
+        browser:    'google chrome',
+        open:       false,
+        notify:     false,
+    });
+});
+
+// SVGstore
+// gulp.task('svgstore', function () {
+//     return gulp.src(files.svgs)
+//         .pipe(svgMin(function (file) {
+//             var prefix = path.basename(file.relative, path.extname(file.relative));
+//             return {
+//                 plugins: [{
+//                     cleanupIDs: {
+//                         prefix: prefix + 'svg-',
+//                         minify: true
+//                     }
+//                 }]
+//             }
+//         }))
+//         .pipe(svgStore())
+//         .pipe(cheerio({
+//             run: function ($) {
+//                 $('svg').attr('style',  'display: none');
+//             },
+//             parserOptions: { xmlMode: true }
+//         }))
+//         .pipe(rename('sprite.svg'))
+//         .pipe(gulp.dest(destDirs.images));
 // });
 
 // Watch
