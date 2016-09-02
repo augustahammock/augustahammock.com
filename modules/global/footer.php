@@ -4,12 +4,12 @@
         <ul class="social-links">
             <li>
                 <a href="https://www.facebook.com/AugustaHammockEquineArt" class="facebook">
-                    <?php include_once($path['img'] . '/svgs/facebook-logo.svg'); ?>
+                    <?php include_once($path['svg'] . '/facebook-logo.svg'); ?>
                 </a>
             </li>
             <li>
                 <a href="https://www.instagram.com/augustahammock/" class="instagram">
-                    <?php include_once($path['img'] . '/svgs/instagram-logo.svg'); ?>
+                    <?php include_once($path['svg'] . '/instagram-logo.svg'); ?>
                 </a>
             </li>
         </ul>

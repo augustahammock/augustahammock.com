@@ -1,5 +1,6 @@
 * {
     font-family: $soinRoman;
+    font-weight: normal;
     color: $charcoal;
     -webkit-font-smoothing: antialiased;
 }
@@ -8,13 +9,19 @@ h1 {
     font-family: $soinRoman;
     font-size: 36px;
     line-height: 44px;
-    letter-spacing: 6px;
+    letter-spacing: 8px;
     text-transform: uppercase;
     color: $white;
+
+    @include breakpoint(700) {
+        font-size: 30px;
+        line-height: 38px;
+        letter-spacing: 6px;
+    }
 }
 
 h2 {
-    font-family: $soinRoman;
+    font-family: $soinMedium;
     font-size: 20px;
     line-height: 28px;
     letter-spacing: 3px;
@@ -42,13 +49,19 @@ p {
     line-height: 25px;
     color: $charcoal;
 
-    &.emphasis {
+    &.emphasis,
+    &.emphasis a {
         font-family: $soinOblique;
     }
 
     &.large {
         font-size: 21px;
         line-height: 29px;
+
+        @include breakpoint(700) {
+            font-size: 17px;
+            line-height: 25px;
+        }
     }
 
     &.small {
@@ -64,6 +77,10 @@ p {
     line-height: 15px;
     text-transform: uppercase;
     color: $grey-3;
+
+    @include breakpoint(700) {
+        font-size: 8px;
+    }
 }
 
 // Text Links -------------------------------------------

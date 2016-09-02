@@ -1,0 +1,17 @@
+// Design gallery items
+
+.hadidi-25-eblast-design {
+    @include retina-bg('../img/design/hadidi-25-eblast-design', 'jpg');
+}
+
+.angela-white-business-cards {
+    @include retina-bg('../img/design/angela-white-business-cards', 'jpg');
+}
+
+.t-shirt-design {
+    @include retina-bg('../img/design/t-shirt-design', 'jpg');
+}
+
+// . {
+//     @include retina-bg('../img/gallery/', 'jpg');
+// }

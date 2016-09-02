@@ -1,0 +1,385 @@
+// Traditional
+.traditional-art {
+    background: $grey-2;
+
+    @include breakpoint(767) {
+        padding-bottom: 1px;
+    }
+
+    .row {
+        height: 660px;
+        padding-top: 150px;
+
+        @include breakpoint(1024) {
+            height: 500px;
+            padding-top: 100px;
+        }
+
+        @include breakpoint(767) {
+            height: auto;
+            padding: 0;
+        }
+    }
+
+    .image-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 800px;
+        background: $white;
+
+        @include breakpoint(960) {
+            width: 550px;
+        }
+
+        @include breakpoint(767) {
+            position: relative;
+            width: 100%;
+            padding-top: 30px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            @include linear-gradient(90deg, $grey-2 0%, $white 100%);
+
+            @include breakpoint(767) {
+                top: 100%;
+                right: 0;
+                width: 100%;
+                height: 200px;
+                @include linear-gradient(360deg, rgba(255, 255, 255, 0) 0%, $white 50%, rgba(255, 255, 255, 0) 100%);
+                margin-top: -100px;
+            }
+        }
+    }
+
+    .image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 602px;
+        @include retina-bg('../img/equine-art/overture', 'jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top right;
+
+        @include breakpoint(960) {
+            right: -60px;
+        }
+
+        @include breakpoint(767) {
+            position: static;
+            width: 100%;
+            margin: 0 auto;
+            padding-top: 83%;
+            background-position: top center;
+        }
+    }
+
+    .content {
+        position: relative;
+        max-width: 500px;
+
+        @include breakpoint(960) {
+            max-width: 350px;
+        }
+
+        @include breakpoint(767) {
+            max-width: 540px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    }
+
+    p {
+        margin-bottom: 30px;
+    }
+
+    .art-gallery {
+        list-style-type: none;
+        margin-bottom: 20px;
+        overflow: hidden;
+
+        li {
+            display: block;
+            float: left;
+            width: 32%;
+            height: 0;
+            background: $charcoal;
+            margin-left: 1.5%;
+            padding-top: 32%;
+        }
+
+        li:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+// Digital
+.digital-art {
+    background: $charcoal;
+
+    @include breakpoint(767) {
+        padding-bottom: 1px;
+    }
+
+    .row {
+        height: 660px;
+        padding-top: 150px;
+        overflow: hidden;
+
+        @include breakpoint(1024) {
+            height: 500px;
+            padding-top: 100px;
+        }
+
+        @include breakpoint(767) {
+            height: auto;
+            padding: 0;
+        }
+    }
+
+    .image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 700px;
+        background: #000;
+
+        @include breakpoint(1024) {
+            width: 500px;
+        }
+
+        @include breakpoint(960) {
+            width: 550px;
+        }
+
+        @include breakpoint(767) {
+            position: relative;
+            width: 100%;
+            padding-top: 30px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            @include linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, #000 80%, rgba(0, 0, 0, 0) 100%);
+            margin-right: -235px;
+
+            @include breakpoint(767) {
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 200px;
+                @include linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, #000 50%, rgba(0, 0, 0, 0) 100%);
+                margin-top: -100px;
+            }
+        }
+    }
+
+    .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        @include retina-bg('../img/equine-art/the-will-of-fire', 'jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+
+        @include breakpoint(1024) {
+            background-position: center center;
+        }
+
+        @include breakpoint(960) {
+            left: -60px;
+        }
+
+        @include breakpoint(767) {
+            position: static;
+            width: 100%;
+            height: 0;
+            margin: 0 auto;
+            padding-top: 83%;
+            background-position: top center;
+            background-size: contain;
+        }
+    }
+
+    .content {
+        float: right;
+        position: relative;
+        max-width: 500px;
+
+        @include breakpoint(960) {
+            max-width: 350px;
+        }
+
+        @include breakpoint(767) {
+            float: none;
+            max-width: 540px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    }
+
+    h2 {
+        color: $white;
+    }
+
+    p {
+        color: $grey-2;
+        margin-bottom: 30px;
+    }
+
+    .caption {
+        color: $grey-3;
+    }
+
+    .art-gallery {
+        list-style-type: none;
+        margin-bottom: 20px;
+        overflow: hidden;
+
+        li {
+            display: block;
+            float: left;
+            width: 32%;
+            height: 0;
+            background: $grey-2;
+            margin-left: 1.5%;
+            padding-top: 32%;
+        }
+
+        li:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+// Illustration
+.illustration-art {
+    background: $grey-2;
+
+    @include breakpoint(767) {
+        overflow: hidden;
+    }
+
+    .row {
+        height: 550px;
+        padding-top: 220px;
+
+        @include breakpoint(1024) {
+            height: 410px;
+            padding-top: 150px;
+        }
+
+        @include breakpoint(960) {
+            padding-top: 130px;
+        }
+
+        @include breakpoint(960) {
+            height: 350px;
+            padding-top: 90px;
+        }
+
+        @include breakpoint(767) {
+            height: auto;
+            padding: 0;
+        }
+    }
+
+    .image-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 660px;
+        background: $white;
+
+        @include breakpoint(960) {
+            width: 550px;
+        }
+
+        @include breakpoint(767) {
+            position: relative;
+            width: 100%;
+            margin-bottom: 10px;
+            padding-top: 20px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 100%;
+            width: 200px;
+            @include linear-gradient(90deg, $grey-2 0%, $white 100%);
+
+            @include breakpoint(767) {
+                top: 100%;
+                right: 0;
+                width: 100%;
+                height: 200px;
+                @include linear-gradient(360deg, $grey-2 0%, $white 100%);
+            }
+        }
+    }
+
+    .image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 800px;
+        @include retina-bg('../img/equine-art/ee-show-ring-etiquette-illustration', 'jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top right;
+
+        @include breakpoint(767) {
+            position: static;
+            width: 100%;
+            margin: 0 auto;
+            padding-top: 83%;
+            background-position: top center;
+        }
+    }
+
+    .content {
+        position: relative;
+        max-width: 500px;
+
+        @include breakpoint(960) {
+            max-width: 350px;
+        }
+
+        @include breakpoint(767) {
+            max-width: 540px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    }
+
+    p {
+        margin-bottom: 30px;
+    }
+}

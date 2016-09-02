@@ -3,3 +3,29 @@
 @mixin breakpoint($viewportWidth) {
     @media only screen and (max-width: $viewportWidth + px) { @content; }
 }
+
+// Retina BG
+// Example: @include retina-bg('../img/home/hero', 'jpg');
+$retina: 'only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)';
+
+@mixin retina-bg($file, $type) {
+  background-image: url($file + '.' + $type);
+  
+  @media #{$retina} {
+    background-image: url($file + '@2x.' + $type);
+  }
+}
+
+// Linear Gradient
+// Example: @include linear-gradient(90deg, $grey-2 0%, $white 100%);
+@mixin linear-gradient($direction, $color-stops...) {
+  // Direction has been omitted and happens to be a color-stop
+  @if is-direction($direction) == false {
+    $color-stops: $direction, $color-stops;
+    $direction: 180deg;
+  }
+
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}

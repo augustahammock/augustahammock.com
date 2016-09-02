@@ -9,4 +9,4 @@
         <link rel="stylesheet" href="<?php echo $path['css'] . $head['pageCSS']; ?>">
     </head>
 
-    <body>
+    <body class="<?php echo $pageSlug; ?>">

@@ -12,6 +12,10 @@
         height: 55px;
         z-index: 3;
 
+        body.home & {
+            display: none;
+        }
+
         @include breakpoint(900) {
             top: 13px;
             left: 15px;
@@ -81,6 +85,11 @@
     margin-bottom: -2px;
     z-index: 2;
 
+    body.home & {
+        text-align: center;
+        left: 20px;
+    }
+
     @include breakpoint(900) {
         display: none;
         top: 67px;
@@ -88,6 +97,10 @@
         left: 0;
         border-bottom: 5px solid $charcoal;
         box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+
+        body.home & {
+            left: 0;
+        }
 
         &.menu-open {
             display: block;
@@ -103,7 +116,7 @@
         color: $grey-3;
         border-bottom: 2px solid transparent;
         margin-left: 35px;
-        padding: 40px 0 10px;
+        padding: 40px 0 8px;
         transition: .3s color ease-out, .3s border-bottom ease-out;
 
         &:first-child {
@@ -132,6 +145,11 @@
 
             &:last-child {
                 border-bottom: 0;
+            }
+
+            &.active {
+                color: $white;
+                border-bottom: 1px solid $red-2;
             }
         }
     }

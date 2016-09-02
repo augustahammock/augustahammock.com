@@ -1,0 +1,121 @@
+.gallery {
+
+    @include breakpoint(1024) {
+        margin-bottom: -30px;
+    }
+
+    li {
+        &:hover {
+            .overlay {
+                opacity: 1;
+                transition: .1s opacity ease-out;
+            }
+        }
+
+        @include breakpoint(1024) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(228, 226, 222, .9);
+    padding-top: 40%;
+    opacity: 0;
+    transition: .3s opacity ease-out;
+
+    @include breakpoint(1024) {
+        position: static;
+        background: $grey-2;
+        padding: 12px 20px 0;
+        opacity: 1;
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+.site-name {
+    font-family: $soinMedium;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $charcoal;
+    margin-bottom: 20px;
+
+    @include breakpoint(1024) {
+        font-family: $soinMedium;
+        font-size: 10px;
+        letter-spacing: 2px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $grey-3;
+        margin-bottom: 10px;
+    }
+}
+
+.site-link {
+    @include breakpoint(1024) {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        text-indent: -9999px;
+        padding-top: 100%;
+        padding-bottom: 22px;
+
+        a {
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-indent: -9999px;
+            background: transparent;
+
+            &:hover {
+                background: transparent;
+            }
+        }
+    }
+}
+
+// Websites gallery items
+
+.iniziare-arabians {
+    @include retina-bg('../img/websites/iniziare-arabians', 'jpg');
+}
+
+.arabian-fancy-tack {
+    @include retina-bg('../img/websites/arabian-fancy-tack', 'jpg');
+}
+
+.hadidi-turns-25 {
+    @include retina-bg('../img/websites/hadidi-turns-25', 'jpg');
+}
+
+.roze-arabians {
+    @include retina-bg('../img/websites/roze-arabians', 'jpg');
+}
+
+.santa-sofia-equine {
+    @include retina-bg('../img/websites/santa-sofia-equine', 'jpg');
+}
+
+.zilal-al-hawah-arabians {
+    @include retina-bg('../img/websites/zilal-al-hawah-arabians', 'jpg');
+}
+
+// . {
+//     @include retina-bg('../img/websites/', 'jpg');
+// }

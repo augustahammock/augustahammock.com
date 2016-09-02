@@ -1,10 +1,7 @@
 .home-hero {
-    background: $charcoal url('../img/home/hero-indomitus@2x.jpg') no-repeat top center;
-    background-size: 1400px auto;
-
-    @include breakpoint(1024) {
-        background-size: cover;
-    }
+    background: $charcoal no-repeat top center;
+    @include retina-bg('../img/home/hero-indomitus', 'jpg');
+    background-size: auto 100%;
 
     @include breakpoint(550) {
         background: $grey-2;
@@ -12,14 +9,14 @@
     }
 
     .row {
-        height: 733px;
+        height: 500px;
 
         @include breakpoint(1024) {
-            height: 500px;
+            height: 400px;
         }
 
         @include breakpoint(768) {
-            height: 390px;
+            height: 300px;
         }
 
         @include breakpoint(550) {
@@ -30,14 +27,10 @@
     .content {
         position: absolute;
         right: 20px;
-        bottom: 80px;
+        bottom: 50px;
         text-align: right;
 
         @include breakpoint(1024) {
-            bottom: 50px;
-        }
-
-        @include breakpoint(768) {
             bottom: 30px;
         }
 

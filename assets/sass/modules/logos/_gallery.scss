@@ -1,0 +1,54 @@
+// Logos gallery images
+
+
+.sonrisa-farms {
+    @include retina-bg('../img/logos/sonrisa-farms', 'jpg');
+}
+
+.heirloom-halters {
+    @include retina-bg('../img/logos/heirloom-halters', 'jpg');
+}
+
+.iniziare-arabians {
+    @include retina-bg('../img/logos/iniziare-arabians', 'jpg');
+}
+
+.jeffries-arabian-center {
+    @include retina-bg('../img/logos/jeffries-arabian-center', 'jpg');
+}
+
+.kisra-arabian-stud {
+    @include retina-bg('../img/logos/kisra-arabian-stud', 'jpg');
+}
+
+.ayn-al-ajab {
+    @include retina-bg('../img/logos/ayn-al-ajab', 'jpg');
+}
+
+.victoria-cross-farm {
+    @include retina-bg('../img/logos/victoria-cross-farm', 'jpg');
+}
+
+.the-arabian-legends {
+    @include retina-bg('../img/logos/the-arabian-legends', 'jpg');
+}
+
+.rusty-spur-arabians {
+    @include retina-bg('../img/logos/rusty-spur-arabians', 'jpg');
+}
+
+.heavens-gate-arabians {
+    @include retina-bg('../img/logos/heavens-gate-arabians', 'jpg');
+}
+
+.misty-star-arabians {
+    @include retina-bg('../img/logos/misty-star-arabians', 'jpg');
+}
+
+.al-azure-arabian-bloodstock {
+    @include retina-bg('../img/logos/al-azure-arabian-bloodstock', 'jpg');
+}
+
+// . {
+//     @include retina-bg('../img/logos/', 'jpg');
+// }

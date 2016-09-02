@@ -3,9 +3,10 @@
     if ($env == 'local'){
         $path = [
             'modules'   => $root . '/modules',
-            'css'       => 'public/css',
-            'js'        => '/augustahammock.com/public/js',
-            'img'       => 'public/img'
+            'css'       => 'http://localhost:8888/augustahammock.com/public/css',
+            'js'        => 'http://localhost:8888/augustahammock.com/public/js',
+            'img'       => 'http://localhost:8888/augustahammock.com/public/img',
+            'svg'       => $root . '/public/img/svgs'
         ];
     } else {
         $path = [
