@@ -10,7 +10,7 @@
     $page = [
         'title' => 'Logos',
         'subheading' => 'Your logo tells the story of who you are in a single image. Give the world an incredible identity to know you by.',
-        'ctaLink' => 'contact',
+        'ctaLink' => $lRoot . '/contact/?interest=logo',
         'ctaText' => 'Let\'s Talk'
     ];
 

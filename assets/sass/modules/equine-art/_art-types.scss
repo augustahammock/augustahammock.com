@@ -8,7 +8,7 @@
 
     .row {
         height: 660px;
-        padding-top: 150px;
+        padding-top: 170px;
 
         @include breakpoint(1024) {
             height: 500px;
@@ -102,26 +102,6 @@
     p {
         margin-bottom: 30px;
     }
-
-    .art-gallery {
-        list-style-type: none;
-        margin-bottom: 20px;
-        overflow: hidden;
-
-        li {
-            display: block;
-            float: left;
-            width: 32%;
-            height: 0;
-            background: $charcoal;
-            margin-left: 1.5%;
-            padding-top: 32%;
-        }
-
-        li:first-child {
-            margin-left: 0;
-        }
-    }
 }
 
 // Digital
@@ -134,7 +114,7 @@
 
     .row {
         height: 660px;
-        padding-top: 150px;
+        padding-top: 170px;
         overflow: hidden;
 
         @include breakpoint(1024) {
@@ -251,26 +231,6 @@
     .caption {
         color: $grey-3;
     }
-
-    .art-gallery {
-        list-style-type: none;
-        margin-bottom: 20px;
-        overflow: hidden;
-
-        li {
-            display: block;
-            float: left;
-            width: 32%;
-            height: 0;
-            background: $grey-2;
-            margin-left: 1.5%;
-            padding-top: 32%;
-        }
-
-        li:first-child {
-            margin-left: 0;
-        }
-    }
 }
 
 // Illustration
@@ -382,4 +342,60 @@
     p {
         margin-bottom: 30px;
     }
+}
+
+// Thumbnails
+.art-gallery {
+    list-style-type: none;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    li {
+        display: block;
+        float: left;
+        width: 32%;
+        background: $charcoal;
+        margin-left: 1.5%;
+    }
+
+    li:first-child {
+        margin-left: 0;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        height: 0;
+        background-size: cover;
+        padding-top: 100%;
+    }
+
+    .tempest {
+        @include retina-bg('../img/equine-art/tempest-thumbnail', 'jpg');
+    }
+
+    .porcelain {
+        @include retina-bg('../img/equine-art/porcelain-thumbnail', 'jpg');
+    }
+
+    .cowgirl {
+        @include retina-bg('../img/equine-art/cowgirl-thumbnail', 'jpg');
+    }
+
+    .oyasumi {
+        @include retina-bg('../img/equine-art/oyasumi-thumbnail', 'jpg');
+    }
+
+    .discernment {
+        @include retina-bg('../img/equine-art/discernment-thumbnail', 'jpg');
+    }
+
+    .the-maidens-keeper {
+        @include retina-bg('../img/equine-art/the-maidens-keeper-thumbnail', 'jpg');
+    }
+
+    // . {
+    //     @include retina-bg('../img/equine-art/', 'jpg');
+    // }
+
 }

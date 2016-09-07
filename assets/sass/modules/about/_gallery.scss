@@ -1,0 +1,40 @@
+// About gallery items
+
+.gallery {
+    padding-bottom: 15px;
+
+    ul {
+        margin-bottom: 5px;
+    }
+
+    li {
+        @include breakpoint(768) {
+            width: 33.333%;
+        }
+
+        @include breakpoint(500) {
+            width: 100%;
+        }
+    }
+
+    p {
+        text-align: center;
+        color: $grey-3;
+    }
+}
+
+.valentino {
+    @include retina-bg('../img/about/valentino', 'jpg');
+}
+
+.amirah {
+    @include retina-bg('../img/about/amirah', 'jpg');
+}
+
+.piper {
+    @include retina-bg('../img/about/piper', 'jpg');
+}
+
+// . {
+//     @include retina-bg('../img/about/', 'jpg');
+// }

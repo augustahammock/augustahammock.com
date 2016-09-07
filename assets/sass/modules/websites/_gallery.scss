@@ -1,7 +1,9 @@
 .gallery {
 
-    @include breakpoint(1024) {
-        margin-bottom: -30px;
+    ul {
+        @include breakpoint(1024) {
+            margin-bottom: -20px;
+        }
     }
 
     li {
@@ -13,7 +15,7 @@
         }
 
         @include breakpoint(1024) {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
     }
 }

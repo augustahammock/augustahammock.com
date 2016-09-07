@@ -1,0 +1,139 @@
+.form {
+    padding: 50px 0;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+
+    @include breakpoint(600) {
+        max-width: 100%;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.form-item {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 120px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(600) {
+        margin-bottom: 30px;
+        padding-left: 0;
+    }
+}
+
+label {
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    width: 100px;
+    font-family: $soinMedium;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-align: right;
+    text-transform: uppercase;
+    color: $charcoal;
+
+    @include breakpoint(600) {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    display: block;
+    width: 100%;
+    font-size: 17px;
+    line-height: 25px;
+    background: $grey-2;
+    border: 1px solid transparent;
+    outline: 0;
+    padding: 14px 20px 7px;
+
+    .has-error & {
+        border: 1px solid $red-1;
+    }
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.errors {
+    display: none;
+    background: $red-1;
+    list-style-type: none;
+
+    .has-error & {
+        display: block;
+    }
+
+    li {
+        color: $white;
+        padding: 12px 20px 8px;
+    }
+}
+
+.interest {
+    padding-top: 11px;
+    margin-bottom: 30px;
+}
+
+.checkbox-options {
+    list-style-type: none;
+
+    .selected {
+        svg {
+            opacity: 1;
+        }
+    }
+
+    li {
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .box {
+        display: inline-block;
+        position: relative;
+        top: 4px;
+        width: 20px;
+        height: 20px;
+        background: $grey-2;
+        margin-right: 10px;
+        padding: 3px;
+        cursor: pointer;
+
+        &:hover {
+            svg {
+                opacity: .5;
+                transition: .1s opacity ease-out;
+            }
+        }
+    }
+
+    svg {
+        display: block;
+        width: 100%;
+        fill: $grey-3;
+        opacity: 0;
+        transition: .1s opacity ease-out;
+    }
+}

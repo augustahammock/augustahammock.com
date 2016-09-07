@@ -10,7 +10,7 @@
     $page = [
         'title' => 'Design',
         'subheading' => 'Good design gets your audience’s attention. Great design puts that attention in the right place.',
-        'ctaLink' => $lRoot . '/contact',
+        'ctaLink' => $lRoot . '/contact/?interest=design',
         'ctaText' => 'Let\'s Talk'
     ];
 

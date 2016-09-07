@@ -11,9 +11,15 @@
                 <h2>Traditional</h2>
                 <p>There’s nothing like the experience of hovering over a clean sheet of handmade paper while imagining what my next equine subject will be...</p>
                 <ul class="art-gallery">
-                    <li class="tempest"></li>
-                    <li class="legend-of-the-nine-tails"></li>
-                    <li class="cowgirl"></li>
+                    <li>
+                        <a href="https://shop.augustahammock.com/products/fine-art-print-tempest" class="tempest" target="_blank">Tempest</a>
+                    </li>
+                    <li>
+                        <a href="https://shop.augustahammock.com/products/fine-art-print-porcelain"  class="porcelain" target="_blank">Porcelain</a>
+                    </li>
+                    <li>
+                        <a href="https://shop.augustahammock.com/products/fine-art-print-cowgirl" class="cowgirl" target="_blank">Cowgirl</a>
+                    </li>
                 </ul>
                 <p class="caption">Featured: &ldquo;Overture&rdquo; - 2016 Watercolor</p>
             </div>
@@ -32,11 +38,17 @@
                 <h2>Digital</h2>
                 <p>Perhaps the most compelling means by which I portray my subjects is with a stylus and graphics tablet. There are no limits when painting digitally!</p>
                 <ul class="art-gallery">
-                    <li class="oyasumi"></li>
-                    <li class="discernment"></li>
-                    <li class="the-maidens-keeper"></li>
+                    <li>
+                        <a href="https://shop.augustahammock.com/products/fine-art-print-oyasumi" class="oyasumi" target="_blank"></a>
+                    </li>
+                    <li>
+                        <a href="https://shop.augustahammock.com/products/fine-art-print-discernment" class="discernment" target="_blank"></a>
+                    </li>
+                    <li>
+                        <a href="https://shop.augustahammock.com/products/fine-art-print-the-maidens-keeper" class="the-maidens-keeper" target="_blank"></a>
+                    </li>
                 </ul>
-                <p class="caption">Featured: &ldquo;The Will of Fire&rdquo; - 2015 Digital Piece</p>
+                <p class="caption">Featured: <a href="https://shop.augustahammock.com/collections/prints/products/the-will-of-fire-art-print" target="_blank">&ldquo;The Will of Fire&rdquo;</a> - 2015 Digital Piece</p>
             </div>
 
         </div>
