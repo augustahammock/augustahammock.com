@@ -3,8 +3,6 @@
 
 $(function() {
 
-    $.getScript('../public/js/global.min.js');
-
     var
         formItems           = $('.form-item.validate'),
         checkboxOptions     = $('.checkbox-options'),

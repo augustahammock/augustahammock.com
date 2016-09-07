@@ -10,10 +10,11 @@
         ];
     } else {
         $path = [
-            'modules'   => $root . '/modules',
+            'modules'   => $_SERVER['DOCUMENT_ROOT'] . '/modules',
             'css'       => $root . '/public/css',
             'js'        => $root . '/public/js',
-            'img'       => $root . '/public/img'
+            'img'       => $root . '/public/img',
+            'svg'       => $_SERVER['DOCUMENT_ROOT'] . '/public/img/svgs'
         ];
     }
 
@@ -37,7 +38,7 @@
 
     // Global include defaults
     $globals = [
-        'pageJS' => $path['js'] . '/global.min.js'
+        'globalJS' => $path['js'] . '/global.min.js'
     ];
 
 ?>

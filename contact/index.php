@@ -11,7 +11,7 @@
         'title' => 'Contact'
     ];
 
-    $globals['pageJS'] = $path['js'] . '/contact.min.js';
+    $pageJS = $path['js'] . '/contact.min.js';
 
     include_once($path['modules'] . '/global/document.php');
     include_once($path['modules'] . '/global/header.php');

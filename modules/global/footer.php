@@ -26,7 +26,10 @@
 </section>
 
 <script src="<?php echo $path['js']; ?>/lib/jquery-3.1.0.min.js"></script>
-<script src="<?php echo $globals['pageJS']; ?>"></script>
+<script src="<?php echo $globals['globalJS']; ?>"></script>
+<?php if (isset($pageJS)) { ?>
+    <script src="<?php echo $pageJS; ?>"></script>
+<?php } ?>
 
 <?php
 
