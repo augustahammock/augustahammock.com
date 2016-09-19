@@ -41,4 +41,8 @@
         'globalJS' => $path['js'] . '/global.min.js'
     ];
 
+    if ($env == 'local') {
+        $shopUrl = $lRoot . '/shop';
+    }
+
 ?>

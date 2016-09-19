@@ -1,0 +1,134 @@
+.product {
+    padding: 50px 0;
+
+    .row {
+        overflow: hidden;
+    }
+}
+
+.product-image {
+    float: left;
+    width: 50%;
+    min-height: 1px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.content {
+    float: left;
+    width: 50%;
+    padding-left: 50px;
+}
+
+.product-header {
+    margin-bottom: 30px;
+}
+
+.product-price {
+    margin-bottom: 10px;
+}
+
+.product-variants-cta {
+    margin-bottom: 30px;
+}
+
+.product-variants-container {
+    display: inline-block;
+    min-width: 140px;
+    position: relative;
+    margin: 0 10px 30px 0;
+    vertical-align: top;
+}
+
+.product-variants {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    list-style-type: none;
+    padding: 0;
+    cursor: pointer;
+
+    &.open {
+        li {
+            display: block;
+        }
+    }
+
+    li {
+        display: none;
+        background: $grey-2;
+        padding: 13px 15px 6px;
+        transition: .3s background ease-out;
+    }
+
+    li:hover {
+        background: #c1bdb9;
+        transition: .1s background ease-out;
+    }
+
+    li.selected {
+        display: block;
+    }
+}
+
+.select-arrow {
+    display: block;
+    position: absolute;
+    top: 19px;
+    right: 15px;
+    border-top: 5px solid $grey-3;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    cursor: pointer;
+}
+
+.product-cta {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.product-description {
+    margin-bottom: 30px;
+}
+
+.creative-description {
+    font-family: $soinOblique;
+    border-bottom: 2px solid $grey-2;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.product-specs {
+    list-style-type: none;
+    margin-bottom: 20px;
+
+    li {
+        font-size: 17px;
+        line-height: 25px;
+        margin-bottom: 5px;
+    }
+}
+
+.product-edition-counts {
+    list-style-type: none;
+    margin-bottom: 20px;
+
+    li {
+        font-size: 17px;
+        line-height: 25px;
+        margin-bottom: 5px;
+    }
+}
+
+.product-fine-print {
+    border-top: 2px solid $grey-2;
+    padding-top: 20px;
+
+    p {
+        font-size: 12px;
+        line-height: 20px;
+        font-family: $soinOblique;
+    }
+}

@@ -27,6 +27,11 @@
 
 <script src="<?php echo $path['js']; ?>/lib/jquery-3.1.0.min.js"></script>
 <script src="<?php echo $globals['globalJS']; ?>"></script>
+
+<?php if (isset($shopPage) && $shopPage == true) { ?>
+    <script src="http://sdks.shopifycdn.com/js-buy-sdk/latest/shopify-buy.polyfilled.globals.min.js"></script>
+<?php } ?>
+
 <?php if (isset($pageJS)) { ?>
     <script src="<?php echo $pageJS; ?>"></script>
 <?php } ?>

@@ -4,8 +4,8 @@
 
     <div class="row">
         <div class="content">
-            <a href="https://shop.augustahammock.com/collections/prints/" class="button cta">Shop Art Prints</a>
-            <p class="caption">&ldquo;Indomitus&rdquo; - 2016 Digital Painting</p>
+            <a href="<?php echo $lRoot; ?>/shop" class="button cta">Shop Art Prints</a>
+            <p class="caption">Featured: &ldquo;Indomitus&rdquo;</p>
         </div>
     </div>
 </section>

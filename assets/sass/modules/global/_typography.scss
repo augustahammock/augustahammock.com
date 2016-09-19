@@ -43,6 +43,19 @@ h3 {
     color: $charcoal;
 }
 
+h4 {
+    font-family: $soinMedium;
+    font-size: 10px;
+    letter-spacing: 2px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $grey-3;
+
+    @include breakpoint(700) {
+        font-size: 8px;
+    }
+}
+
 p {
     font-family: $soinRoman;
     font-size: 17px;

@@ -10,7 +10,7 @@
     $page = [
         'title' => 'Equine Art',
         'subheading' => 'Throughout history, the horse has conquered both country and canvas. To many who behold him, he is the ultimate expression of art.',
-        'ctaLink' => 'https://shop.augustahammock.com/collections/prints',
+        'ctaLink' => $lRoot . '/shop',
         'ctaText' => 'Shop Art Prints'
     ];
 
