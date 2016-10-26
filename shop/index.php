@@ -3,12 +3,12 @@
     include_once('../modules/env.php');
     include_once('../modules/globals.php');
 
-    $head['title'] = 'Shop Art Prints';
+    $head['title'] = 'Shop';
     $pageSlug = 'shop';
     $shopPage = true;
 
     $page = [
-        'title' => 'Art Prints'
+        'title' => 'Shop Art Prints'
     ];
 
     $isProductPage = isset($_GET['product']);

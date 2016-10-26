@@ -1,4 +1,4 @@
-<section class="product" data-product="<?php echo $_GET['product']; ?>">
+<section class="product" data-product-handle="<?php echo $_GET['product']; ?>" data-product-id="">
     <div class="row">
 
         <div class="product-image"></div>
@@ -21,7 +21,7 @@
 
                 </div>
 
-                <a href="#" class="button">Add to Cart</a>
+                <a href="#" class="button add-to-cart">Add to Cart</a>
 
             </div>
 

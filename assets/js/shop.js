@@ -6,9 +6,9 @@ $(function() {
   var printsList = $('.prints-list');
 
     var shopClient = ShopifyBuy.buildClient({
-        apiKey:             '031333422074d0234ac4be2f6c55285c',
-        myShopifyDomain:    'augusta-hammock-equine-art',
-        appId:              '6'
+        apiKey: '031333422074d0234ac4be2f6c55285c',
+        domain: 'augusta-hammock-equine-art.myshopify.com',
+        appId:  '6'
     });
 
     shopClient.fetchQueryProducts({collection_id: 142011333, sort_by: 'collection-default'})

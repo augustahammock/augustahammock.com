@@ -30,6 +30,7 @@
 
 <?php if (isset($shopPage) && $shopPage == true) { ?>
     <script src="http://sdks.shopifycdn.com/js-buy-sdk/latest/shopify-buy.polyfilled.globals.min.js"></script>
+    <!-- <script src="<?php echo $path['js']; ?>/lib/shopify-helpers.min.js"></script> -->
 <?php } ?>
 
 <?php if (isset($pageJS)) { ?>
