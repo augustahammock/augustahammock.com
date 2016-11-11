@@ -6,7 +6,7 @@
                 <div class="image sonrisa-farms"></div>
             </li>
             <li>
-                <div class="image heirloom-halters"></div>
+                <div class="image five-diamond"></div>
             </li>
             <li>
                 <div class="image iniziare-arabians"></div>
@@ -18,7 +18,7 @@
                 <div class="image kisra-arabian-stud"></div>
             </li>
             <li>
-                <div class="image ayn-al-ajab"></div>
+                <div class="image heirloom-halters"></div>
             </li>
         </ul>
 

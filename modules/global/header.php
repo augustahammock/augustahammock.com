@@ -16,7 +16,7 @@
             <a href="<?php echo $lRoot; ?>/design"<?php if ($pageSlug == 'design'){ echo ' class="active"'; } ?>>Design</a>
             <a href="<?php echo $lRoot; ?>/about"<?php if ($pageSlug == 'about'){ echo ' class="active"'; } ?>>About</a>
             <a href="<?php echo $lRoot; ?>/contact"<?php if ($pageSlug == 'contact'){ echo ' class="active"'; } ?>>Contact</a>
-            <a href="<?php echo $shopUrl; ?>" class="button<?php if (isset($shopPage) && $shopPage == true){ echo ' active'; } ?>">Shop</a>
+            <a href="<?php echo $shopUrl; ?>" class="<?php if ($shopPage){ echo ' active'; } ?>">Shop</a>
         </nav>
 
     </div>

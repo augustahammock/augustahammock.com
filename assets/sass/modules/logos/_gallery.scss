@@ -21,9 +21,13 @@
     @include retina-bg('../img/logos/kisra-arabian-stud', 'jpg');
 }
 
-.ayn-al-ajab {
-    @include retina-bg('../img/logos/ayn-al-ajab', 'jpg');
+.five-diamond {
+    @include retina-bg('../img/logos/arabians-at-the-five-diamond', 'jpg');
 }
+
+// .ayn-al-ajab {
+//     @include retina-bg('../img/logos/ayn-al-ajab', 'jpg');
+// }
 
 .victoria-cross-farm {
     @include retina-bg('../img/logos/victoria-cross-farm', 'jpg');
